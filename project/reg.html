@@ -1,0 +1,194 @@
+<html>
+<head>
+  <style>
+    a{
+
+color:Black;
+font-weight:bold;
+
+text-align: center;
+text-decoration:none;
+font-size: 40px;
+padding:10px;
+border-radius:2px;  
+
+  }
+  .nav{
+width:100%;
+height:65px;
+ 
+margin-top: :10%;
+background-color:brown; 
+opacity: 0.5;
+
+  }
+  ul{width:100%;
+    display: table;
+text-align: center; 
+list-style-type:none;
+
+
+height:50px; 
+padding:2px;
+position: absolute;
+top:50px;
+
+
+}
+li
+{ 
+  text-align: center; 
+    display: table-cell;
+    transition: 200ms;
+transition: 200ms;
+    
+
+}
+li:hover{
+  letter-spacing:2px; 
+}
+
+  input{
+  background-color:skyblue;
+  height:30px;
+  width:200px;
+}
+table{
+  border-collapse:collapse;
+  border:none;
+  position:absolute;
+  top:60%;
+  left:50%;
+  width:50%;
+  transform:translate(-50%,-50%);
+}
+tr,th{
+  font-size:20px;
+  padding:10px;
+  font-family:'Times New Roman';
+  font-weight:bold;
+  border:none;
+  
+}
+body{
+margin:0;
+  background-image:url("a.jpg");
+  background-size:cover; 
+}
+a:hover{
+color:red;
+background-size:cover;}
+#btn{
+  font-size:25px;
+  border-size:2px;
+  border-radius:7px;
+  background-color:#42b9f4;
+  margin-top:30%;
+  margin-left:45%;
+}
+#H{
+  text-align:center;
+  font-weight:bold;
+  font-size:50px;
+  font-family:trajan;
+  padding:2px;
+  background-color:skyblue;
+  
+  
+  
+}
+</style>
+
+</head>
+<body>
+  <h1 id="H"><a>Registration Page</h1>
+<div class="nav">
+  <ul>
+<li><a href="file:///E:/web/website/project/home.html">Home</a></li>  
+  <li><a href="file:///E:/web/website/project/reg.html">Registration</a></li>
+  <li><a href="file:///E:/web/website/project/login.html">Login</a></li>      
+  <li><a href="file:///E:/web/website/project/profile.html">Profile</a></li>  
+  <li><a href="file:///E:/web/website/project/catalog.html">Book Catalog</a></li>
+  <li><a href="file:///E:/web/website/project/cart.html">Cart</a></li>  
+  <li><a href="file:///E:/web/website/project/payment.html">Payment</a></li>
+
+</ul>
+</div>
+<table>
+  <tr>
+    <th>
+      User-Name:</th>
+    <th><input type="text" id="ent">
+          </th>
+  </tr><tr><th>
+      Password:</th>
+    <th><input type="text" id="pass">
+  </tr>
+  <tr><th>
+
+      <tr><th>
+      Email-id:</th>
+    <th><input type="text" id="em">
+  </tr>
+      <tr><th>
+      Phone Number:</th>
+    <th><input type="text" id="pn">
+  </tr>
+
+  </table>
+  <button type="button" onclick="reg()"
+  id="btn"><a href="C:\Users\sahil\Desktop\website\project\profile.html">REGISTER</a></button>
+</html>
+<script type="text/javascript">
+  
+function reg()
+{
+    var a=document.getElementById('ent').value;
+    var pat=(/([A-Za-z]){6,}/);
+    var x=pat.test(a);
+    
+     var b=document.getElementById('pass').value;
+    var patpass=(/.{6,}/);
+    var y=patpass.test(b);
+    
+         var c=document.getElementById('em').value;
+    var patem=(/[A-Za-z0-9]@[A-Za-z0-9]+\.com/);
+    var z=patem.test(c);
+   
+         var d=document.getElementById('pn').value;
+    var patpn=(/^\d{10}$/);
+    var a=patpn.test(d);
+    
+    if(x)
+    {  //alert("USERNAME SUCCESS!");
+        
+        }
+    else{alert("Username must be at least 6 Characters");}
+    
+   
+    if(y)
+    { //alert("PASS SUCCESS");
+     
+    }
+    else{alert("Password must be at least 6 Characters");}
+        
+    
+    
+       
+    if(z)
+    { //alert("PASS SUCCESS");
+alert("Email GOOD");
+    }
+    else{alert("Email must be in format abc@xyz.com");}
+        
+    
+    
+        if(x&y&z&a)
+    {   alert("Registeration Succesfull!"); 
+     
+
+    }
+    else{alert("Phone number must be 10 digits only");}
+    
+} 
+</script>
